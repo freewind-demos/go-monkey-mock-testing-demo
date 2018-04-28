@@ -1,7 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
+
+func GetNow() time.Time {
+	return time.Now()
+}
+
+func DayOfMonth() int {
+	return GetNow().Day()
+}
 
 func main() {
-	fmt.Println("Hello go!")
+	fmt.Println(DayOfMonth())
 }

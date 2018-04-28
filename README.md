@@ -1,10 +1,10 @@
-Go Hello World Demo
-===================
+GoMonkey Demo
+==============
+
+Use [Monkey](https://github.com/bouk/monkey) to patch functions for easier testing.
 
 ```
 brew install go
 go get
-go run hello.go
+go test .
 ```
-
-You will see `Hello, go!`
