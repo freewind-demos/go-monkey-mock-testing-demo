@@ -5,14 +5,22 @@ import (
 	"time"
 )
 
-func GetNow() time.Time {
+type Clock struct {
+	name string
+}
+
+func (clock *Clock) GetNow() time.Time {
 	return time.Now()
 }
 
-func DayOfMonth() int {
-	return GetNow().Day()
+func Hello() string {
+	return "Hello!"
 }
 
 func main() {
-	fmt.Println(DayOfMonth())
+	clock := &Clock{
+		name: "my-clock",
+	}
+	fmt.Println(clock.GetNow())
+	fmt.Println(Hello())
 }
